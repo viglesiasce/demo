@@ -8,7 +8,10 @@ deploy:
     manifests:
       - k8s-*
 profiles:
-  - name: gcb
+  - name: deploy
+    tagPolicy:
+      envTemplate:
+        template: "{{.IMAGE_NAME}}:{{.GIT_TAG}}"
     build:
       googleCloudBuild:
         projectId: vic-goog-meli-demo
