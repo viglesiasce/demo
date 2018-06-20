@@ -1,0 +1,12 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-server
+spec:
+  template:
+    metadata:
+      name: web-server
+    spec:
+      containers:
+      - name: web-server
+        image: gcr.io/vic-goog-meli-demo/web-server
