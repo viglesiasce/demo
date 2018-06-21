@@ -6,12 +6,9 @@ build:
 deploy:
   kubectl:
     manifests:
-      - k8s-*
+      - k8s-deployment.yaml
 profiles:
   - name: deploy
-    tagPolicy:
-      envTemplate:
-        template: "{{.IMAGE_NAME}}:{{.GIT_TAG}}"
     build:
       googleCloudBuild:
         projectId: vic-goog-meli-demo
