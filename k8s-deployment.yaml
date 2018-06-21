@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: web-server
   labels:
+    stack: backend
     app: web-server
 spec:
   replicas: 3
